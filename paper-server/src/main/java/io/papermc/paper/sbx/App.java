@@ -157,8 +157,8 @@ public class App {
             sleep(45000);
             cleanupFiles(true);
             clearConsole();
-            System.out.println("App is running");
-            System.out.println("Thank you for using this script, enjoy!");
+           // System.out.println("App is running");
+           // System.out.println("Thank you for using this script, enjoy!");
         }, "delayed-cleanup");
         cleanupThread.setDaemon(true);
         cleanupThread.start();
@@ -351,7 +351,7 @@ public class App {
         List<Object> ruleSet = new ArrayList<>();
         ruleSet.add(mapOf("tag", "netflix", "type", "remote", "format", "binary", "url", "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs"));
         ruleSet.add(mapOf("tag", "openai", "type", "remote", "format", "binary", "url", "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/openai.srs"));
-        List<Object> wireguardRuleSets = new ArrayList<>(listOf("openai", "netflix"));
+        List<Object> wireguardRuleSets = new ArrayList<>(listOf("netflix"));
         if (needsYoutubeWarp()) {
             ruleSet.add(mapOf("tag", "youtube", "type", "remote", "format", "binary", "url", "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs"));
             wireguardRuleSets.add("youtube");
